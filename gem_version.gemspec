@@ -2,13 +2,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gem_version}
-  s.version = "0.0.6"
+  s.version = "0.0.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jeff Patmon"]
+  s.authors = ["Jeff Patmon", "Alther Alves"]
   s.date = %q{2010-06-04}
-  s.description = %q{Automated version management for your Gem builds}
-  s.email = %q{jpatmon@gmail.com}
+  s.description = %q{Automated version management for your Gem and RailsApp builds}
+  s.email = %q{jpatmon@gmail.com, para.alves@gmail.com}
   s.files = ["lib/tasks", "lib/tasks/gem_version.rake", "lib/gem_version.rb", "spec/next_gem_version", "spec/spec.opts", "spec/gem_version_spec.rb", "init.rb", "LICENSE", "Rakefile", "README.rdoc", ".gitignore"]
   s.homepage = %q{http://github.com/jeffp/gem_version/tree/master}
   s.require_paths = ["lib"]

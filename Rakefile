@@ -9,7 +9,7 @@ spec = Gem::Specification.new do |s|
   s.version = GemVersion.next_version
   s.platform = Gem::Platform::RUBY
   s.required_ruby_version = '>= 1.8.6'
-  s.description = 'Automated version management for your Gem builds'
+  s.description = 'Automated version management for your Gem and RailsApp builds'
   s.summary = 'Never bother updating the version for your next gem build by hand.  Configured in your Rakefile, gem_version provides the next Gem version and stores it to the repository.'
 
   s.add_dependency('git', '>= 1.2.5')  
@@ -21,9 +21,9 @@ spec = Gem::Specification.new do |s|
   s.has_rdoc = true
   s.test_files = Dir['spec/*_spec.rb']
   
-  s.author = 'Jeff Patmon'
-  s.email = 'jpatmon@gmail.com'
-  s.homepage = 'http://github.com/jeffp/gem_version/tree/master'
+  s.author = 'Jeff Patmon, Alther Alves'
+  s.email = 'jpatmon@gmail.com, para.alves@gmail.com'
+  s.homepage = 'http://github.com/altherlex/gem_version/tree/master'
 end
  
 require 'spec/version'
