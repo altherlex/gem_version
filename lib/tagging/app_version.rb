@@ -1,5 +1,5 @@
 
-load File.dirname(__FILE__) + '/lib/tagging/tasks/app_version.rake'
+load File.dirname(__FILE__) + '/tasks/app_version.rake'
 
 module Tagging
   class AppVersion
