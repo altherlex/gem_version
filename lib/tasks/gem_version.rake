@@ -9,13 +9,13 @@ namespace :tagging do
     task :version do
       if (ENV.include?("set"))
         version = ENV['set'].gsub(/'/, '')
-        unless GemVersion.version_format_valid?(version)
+        unless Tagging::GemVersion.version_format_valid?(version)
           raise "Version '#{version}' format invalid.  Must only contain digits separated by decimal points."
         end
-        GemVersion.set_version(version)
+        Tagging::GemVersion.set_version(version)
         puts "Next version set at '#{version}'"
       else
-        puts GemVersion.next_version
+        puts Tagging::GemVersion.next_version
       end
     end
   end
