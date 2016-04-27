@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.license               = "MIT"
 
   s.add_dependency 'git', [">= 1.2.5"]
+  s.add_dependency 'logger'
 
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rake'

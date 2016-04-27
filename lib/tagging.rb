@@ -1,2 +1,5 @@
+require 'rubygems'
+require 'git'
+require 'logger'
 require 'tagging/app_version'
 require 'tagging/gem_version'

@@ -2,7 +2,11 @@ require 'rubygems'
 require 'git'
 require 'logger'
 
-load File.dirname(__FILE__) + '/tasks/gem_version.rake'
+puts '*'*40
+puts File.dirname(__FILE__).inspect
+puts '*'*40
+
+load File.dirname(__FILE__) + '/lib/tagging/tasks/gem_version.rake'
 
 
 module Tagging
