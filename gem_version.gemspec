@@ -1,33 +1,28 @@
 # -*- encoding: utf-8 -*-
+require File.expand_path('../lib/tagging/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name = %q{gem_version}
-  s.version = "0.0.7"
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jeff Patmon", "Alther Alves"]
-  s.date = %q{2010-06-04}
-  s.description = %q{Automated version management for your Gem and RailsApp builds}
-  s.email = %q{jpatmon@gmail.com, para.alves@gmail.com}
-  s.files = `git ls-files`.split("\n")
-  s.homepage = %q{http://github.com/altherlex/gem_version/tree/master}
-  s.require_paths = ["lib"]
+  s.name                  = "tagging"
+  s.platform              = Gem::Platform::RUBY
+  s.authors               = ["Alther Alves"]
+  s.email                 = ["para.alves@gmail.com"]
+  s.date                  = "2016-04-21"
+  s.homepage              = "http://github.com/altherlex/gem_version/tree/master"
+  s.summary               = %q{Never bother updating the version for your next gem build by hand.  Configured in your Rakefile, gem_version provides the next Gem version and stores it to the repository.}
+  s.description           = %q{Automated version management for your Gem and RailsApp builds}
+  
+  s.files                 = `git ls-files`.split("\n")
+  s.test_files            = `git ls-files -- spec/*`.split("\n")
+  # s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths         = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8.6")
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Never bother updating the version for your next gem build by hand.  Configured in your Rakefile, gem_version provides the next Gem version and stores it to the repository.}
-  s.test_files    = `git ls-files -- spec/*`.split("\n")
+  s.rubygems_version      = %q{1.3.7}
+  s.version               = Tagging::VERSION
+  s.license               = "MIT"
 
+  s.add_dependency 'git', [">= 1.2.5"]
 
-  if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<git>, [">= 1.2.5"])
-    else
-      s.add_dependency(%q<git>, [">= 1.2.5"])
-    end
-  else
-    s.add_dependency(%q<git>, [">= 1.2.5"])
-  end
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rake'
+  # s.add_development_dependency 'coveralls'
 end
