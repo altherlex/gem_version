@@ -9,13 +9,14 @@ Gem::Specification.new do |s|
   s.date = %q{2010-06-04}
   s.description = %q{Automated version management for your Gem and RailsApp builds}
   s.email = %q{jpatmon@gmail.com, para.alves@gmail.com}
-  s.files = ["lib/tasks", "lib/tasks/gem_version.rake", "lib/gem_version.rb", "spec/next_gem_version", "spec/spec.opts", "spec/gem_version_spec.rb", "init.rb", "LICENSE", "Rakefile", "README.rdoc", ".gitignore"]
-  s.homepage = %q{http://github.com/jeffp/gem_version/tree/master}
+  s.files = `git ls-files`.split("\n")
+  s.homepage = %q{http://github.com/altherlex/gem_version/tree/master}
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8.6")
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Never bother updating the version for your next gem build by hand.  Configured in your Rakefile, gem_version provides the next Gem version and stores it to the repository.}
-  s.test_files = ["spec/gem_version_spec.rb"]
+  s.test_files    = `git ls-files -- spec/*`.split("\n")
+
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION

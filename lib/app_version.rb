@@ -2,6 +2,8 @@ require 'rubygems'
 require 'git'
 require 'logger'
 
+load File.dirname(__FILE__) + '/tasks/app_version.rake'
+
 module AppVersion
   @@default_commit_message = 'versioning by CI'
   @@version
