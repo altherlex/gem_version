@@ -1,9 +1,4 @@
-puts '*'*40
-puts File.dirname(__FILE__).inspect
-puts '*'*40
-
 load File.dirname(__FILE__) + '/tasks/gem_version.rake'
-
 
 module Tagging
   class GemVersion
